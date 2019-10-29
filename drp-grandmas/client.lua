@@ -36,9 +36,8 @@ function Draw3DText(x,y,z, text)
     AddTextComponentString(text)
     DrawText(_x,_y)
     local factor = (string.len(text)) / 370
-    DrawRect(_x,_y+0.0125, 0.015+ factor, 0.03, 41, 11, 41, 68)
+    DrawRect(_x,_y+0.0125, 0.015+ factor, 0.03, 0, 0, 0, 68)
 end
-
 local coords = { x = 2433.91, y = 4965.50, z = 42.00, h = 43.69 }
 
 Citizen.CreateThread(function()
@@ -52,6 +51,7 @@ Citizen.CreateThread(function()
                 if distance < 3 then
 			        Draw3DText(coords.x, coords.y, coords.z + 0.5, '[E] - Check in for $1,000')
                         if IsControlJustReleased(0, 54) then
+                            DisableControlAction(0, 54, true)
                             if (GetEntityHealth(PlayerPedId()) <= 200) then
                                 exports['mythic_progbar']:Progress({
                                     name = "grandmas_house",
@@ -90,6 +90,7 @@ Citizen.CreateThread(function()
                                         TriggerEvent('esx_ambulancejob:revive')
                                         --end revive code
                                         TriggerServerEvent('drp-grandmas:payBill')
+                                        EnableControlAction(0, 54, true)
                                     end
                                 end)
                             else
