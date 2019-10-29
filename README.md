@@ -1,3 +1,3 @@
 # destinationrp
 
-Please only submit bug reports through the "Issues" section.
+All public released from Destination Roleplay
