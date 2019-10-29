@@ -1,6 +1,10 @@
 # drp-grandmas
 
-REQUIRED
+Below are the recommended files to use for Drag & Drop
+
+# REQUIRED
+
+[ESX](https://forum.fivem.net/t/release-esx-base/39881)
 
 [mythic_notify](https://github.com/mythicrp/mythic_notify)
 
