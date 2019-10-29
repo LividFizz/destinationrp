@@ -1,4 +1,4 @@
-#drp-cardoors
+# drp-cardoors
 
 Command : /door [open] [0-5]
 
