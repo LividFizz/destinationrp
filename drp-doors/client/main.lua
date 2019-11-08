@@ -74,8 +74,8 @@ function DrawText3D(coords, text, size)
     DrawRect(_x,_y+0.0125, 0.015+ factor, 0.03, 41, 11, 41, 68)
 end
 
-RegisterNetEvent('esx:fuckShit')
-AddEventHandler('esx:fuckShit', function(job)
+RegisterNetEvent('esx:setJob')
+AddEventHandler('esx:setJob', function(job)
 	ESX.PlayerData.job = job
 end)
 
@@ -193,19 +193,6 @@ Citizen.CreateThread(function()
 				if isAuthorized then
 					--displayText = _U('press_button', displayText)
 				end	
-				
-				if IsControlJustReleased(0, Keys['E']) then
-					local playerPed = PlayerPedId()
-					PedPosition		= GetEntityCoords(playerPed)
-	
-					local PlayerCoords = { x = PedPosition.x, y = PedPosition.y, z = PedPosition.z }
-					if ESX.PlayerData.job.name == 'police' then
-						
-						
-
-						
-					end
-				end
 			end
 		end
 	end
